@@ -126,15 +126,7 @@ Raw CSVs are *not* committed; only tiny derivative slices remain in Git.
 
 ---
 
-## 9  Timeline checkpoints
-| Date | Deliverable |
-|------|-------------|
-| **31 Jul 2025** | Qualtrics #1 — dataset, baseline stats, early LLM runs |
-| **15 Aug 2025** | Qualtrics #2 — advanced prompts, failure log, visuals |
-
----
-
-## 10  Credits
+## 9  Credits
 **Rijul Chaturvedi** — M.S. Applied Data Science, Syracuse University  
 Advisor: **Prof. Jeff Strome** (`jrstrome@syr.edu`)
 
