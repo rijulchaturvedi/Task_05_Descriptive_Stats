@@ -130,4 +130,58 @@ Raw CSVs are *not* committed; only tiny derivative slices remain in Git.
 **Rijul Chaturvedi** — M.S. Applied Data Science, Syracuse University  
 Advisor: **Prof. Jeff Strome** (`jrstrome@syr.edu`)
 
+
+
+---------------------
+
+
+# Part II — Advanced Descriptive Analysis (F1)
+
+This addendum extends **Task 05 – Descriptive Statistics** with deeper metrics, robust preprocessing, and publication-ready visuals. It is designed to be pasted into your repository README. All analyses run locally on the CSVs in `Data/` and export tidy tables (CSV) and figures (PNG) suitable for reports.
+
+---
+
+## 📚 Contents
+- [What’s new](#whats-new)
+- [Quick start](#quick-start)
+- [Analyses](#analyses)
+  - [1) Pit-Stop Consistency Deep-Dive](#1-pit-stop-consistency-deep-dive)
+  - [2) Constructor Efficiency — Points per Pit-Stop Second (2024)](#2-constructor-efficiency--points-per-pit-stop-second-2024)
+  - [3) Team-mate Qualifying Duel — Average Grid Advantage (2024)](#3-team-mate-qualifying-duel--average-grid-advantage-2024)
+  - [4) Reliability — DNF Rate by Constructor (2024)](#4-reliability--dnf-rate-by-constructor-2024)
+  - [5) Fastest-Lap Specialist — Rate by Driver (2020–2024)](#5-fastest-lap-specialist--rate-by-driver-20202024)
+- [Outputs](#outputs)
+- [Figures](#figures)
+- [Methods & assumptions](#methods--assumptions)
+- [Sensitivity & robustness](#sensitivity--robustness)
+- [Troubleshooting](#troubleshooting)
+- [Reproducibility checklist](#reproducibility-checklist)
+- [Repo structure (suggested)](#repo-structure-suggested)
+- [Changelog](#changelog)
+- [Next steps](#next-steps)
+
+---
+
+## What’s new
+
+- **New metrics**: pit-stop **consistency**, **efficiency (pts/sec)**, **qualifying dominance**, **reliability (DNF rate)**, and **fastest-lap rate**.
+- **Robust parsing**: flexible handling of driver/constructor names (`forename` vs `forenames`, `name` vs `constructorRef`), and pit stop **`duration`** formats (`ss.sss`, `m:ss.sss`, `h:mm:ss.sss`).
+- **Clean exports**: CSV tables + single-plot, Matplotlib-only PNGs; bootstrap CIs for pit-stop means.
+- **Drop-in scripts**: minimal-dependency CLI (`simple_part2.py`) and notebook cells for each analysis.
+
+---
+
+## Quick start
+
+### Option A — Notebook
+Open your Part II notebook and run cells in order. Each analysis cell saves a CSV to the repo root (or `outputs/`) and displays a figure.
+
+### Option B — Script (minimal deps: `pandas`, `numpy`, `matplotlib`)
+```bash
+python simple_part2.py \
+  --input Data/pit_stops.csv \
+  --outdir figures_part2 \
+  --target milliseconds \
+  --group driverId
+
 > *“Two sources are better than one—especially when one is an LLM.”* 🚀
