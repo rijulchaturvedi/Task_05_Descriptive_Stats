@@ -1,5 +1,5 @@
 
-# Task 05 – Descriptive Stats
+# Task 05 – Descriptive Stats Part I & Part II
 **Comparing Python ground-truth vs. ChatGPT reasoning on Formula 1 data**
 
 ![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue)
